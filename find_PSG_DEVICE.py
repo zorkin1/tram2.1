@@ -5,14 +5,14 @@ find_vagon=0
 no_find_vagon=0
 no_data=0
 print('Поиск')
-with open('C://tram/mgt_trans_01032023.csv') as file:
+with open('mgt_example_trans.csv') as file:
     reader = csv.DictReader(file, delimiter=";")
     for row in reader:
         row = str(row['PSG_DEVICE'])
         row_find = row
 #        print(row_find)
 
-        book = openpyxl.open("C://tram/справочник.xlsx", read_only=True)
+        book = openpyxl.open("справочник.xlsx", read_only=True)
         sheet = book.active
         count = 0
         validator = []
@@ -24,7 +24,7 @@ with open('C://tram/mgt_trans_01032023.csv') as file:
 
 #                print('Вагон', row, 'найден в строке', count)
                 validator.append(i)
-#                print(validator)
+                print(validator)
                 find_vagon+=1
                 print({find_vagon}, {no_find_vagon}, {no_data})
 
