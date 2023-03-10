@@ -15,7 +15,7 @@ df = pd.read_csv('C:/tram/mgt_trans_01032023.csv', sep=';')
 all_row=df.index.stop+1
 print('В файле',all_row ,"строк")
 
-df.to_csv('C:/tram/new_file.csv', sep=';')
+#df.to_csv('C:/tram/new_file.csv', sep=';')
 
 #with open('C:/tram/mgt_example_trans.csv') as file_csv, open('C:/tram/new_file.csv', 'w') as f:
 #    reader = csv.reader(file_csv, delimiter=";")
